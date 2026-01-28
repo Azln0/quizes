@@ -1,0 +1,62 @@
+
+/* This file is kept minimal since we primarily use Tailwind CSS */
+
+/* Animation for the gradient movement */
+@keyframes gradient-x {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+.animate-gradient-x {
+  animation: gradient-x 3s ease infinite;
+  background-size: 200% 200%;
+}
+
+/* Pulse glow animation */
+@keyframes pulse-glow {
+  0% {
+    opacity: 0.8;
+    text-shadow: 0 0 5px rgba(255, 255, 255, 0.5);
+  }
+  50% {
+    opacity: 1;
+    text-shadow: 0 0 20px rgba(255, 255, 255, 0.8);
+  }
+  100% {
+    opacity: 0.8;
+    text-shadow: 0 0 5px rgba(255, 255, 255, 0.5);
+  }
+}
+
+.animate-pulse-glow {
+  animation: pulse-glow 2s ease-in-out infinite;
+}
+
+.shadow-glow {
+  box-shadow: 0 0 15px rgba(255, 215, 0, 0.6);
+}
+
+/* Ensure content doesn't get hidden under the fixed navbar */
+body {
+  padding-top: 4rem; /* 64px, matches the navbar height */
+}
+
+/* Additional utility classes */
+.text-glow {
+  text-shadow: 0 0 10px rgba(255, 255, 255, 0.5);
+}
+
+.gaming-gradient {
+  background: linear-gradient(45deg, #6a11cb 0%, #2575fc 100%);
+}
+
+.gaming-card {
+  @apply border border-white/10 bg-black/50 backdrop-blur-md shadow-lg;
+}
